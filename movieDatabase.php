@@ -1,6 +1,6 @@
 <?php
 $host = 'yazureprivatedns.net';
-$dbname = 'HungamaMovies_group';
+$dbname = 'moviedatabase';
 $username = 'Ishal Imran';
 $password = '9zSXnY+g89e-Df8';
 
