@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Additional CSS styles */
+        /* Adjust as needed */
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Movie Database</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container mt-3">
+        <!-- Search Movies Form -->
+        <h3>Search Movies</h3>
+        <form action="search_movies.php" method="GET" class="form-inline">
+            <input type="text" id="search" name="search" class="form-control mr-sm-2" placeholder="Enter movie title...">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        <!-- Add New Movie Form -->
+        <hr>
+        <h3>Add New Movie</h3>
+        <form action="add_movie_process.php" method="POST">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="release_year">Release Year:</label>
+                <input type="number" id="release_year" name="release_year" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="director">Director:</label>
+                <input type="text" id="director" name="director" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Movie</button>
+        </form>
+
+        <!-- Delete Movie Form -->
+        <hr>
+        <h3>Delete Movie</h3>
+        <form action="delete_movie_process.php" method="POST">
+            <div class="form-group">
+                <label for="movie_id">Movie ID:</label>
+                <input type="number" id="movie_id" name="movie_id" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-danger">Delete Movie</button>
+        </form>
+
+        <!-- Display Search Results -->
+        <hr>
+        <h3>Search Results</h3>
+        <div class="row">
+            <!-- Placeholder for movie pictures (using Bootstrap cards) -->
+            <!-- Adjust as needed -->
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="C:/Users/Lenovo/Downloads/81218n6JFgL._AC_UL210_SR210,210_.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title</h5>
+                        <p class="card-text">Release Year: 2022</p>
+                        <p class="card-text">Genre: Action</p>
+                        <p class="card-text">Director: John Doe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Display All Movies -->
+        <hr>
+        <h3>All Movies</h3>
+        <div class="row">
+            <!-- Placeholder for movie pictures (using Bootstrap cards) -->
+            <!-- Adjust as needed -->
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="C:/Users/Lenovo/Downloads/allmovies.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Title</h5>
+                        <p class="card-text">Release Year: 2022</p>
+                        <p class="card-text">Genre: Action</p>
+                        <p class="card-text">Director: John Doe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark">
+        <div class="container text-center">
+            <span class="text-white">© 2024 Movie Database. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
